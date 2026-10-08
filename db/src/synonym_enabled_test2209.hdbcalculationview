@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="synonym_enabled_test2209" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" hierarchyGeneration="SQL" outputViewType="Aggregation" application="BAS" cacheInvalidationPeriod="NONE" enforceSqlExecution="true">
+<descriptions defaultDescription="synonym_enabled_test2209"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="test2209_cube">
+    <resourceUri>test2209_cube</resourceUri>
+  </DataSource>
+</dataSources>
+<snapshotProcedures/>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <viewAttributes>
+      <viewAttribute id="CATEGORY"/>
+      <viewAttribute id="CUSTOMER_NAME"/>
+      <viewAttribute id="PRODUCT_NAME"/>
+      <viewAttribute id="CUSTOMER_TYPE"/>
+      <viewAttribute id="productName_category"/>
+      <viewAttribute id="BEVERAGE_QTY"/>
+      <viewAttribute id="Deviation_per"/>
+      <viewAttribute id="SALES_QTY"/>
+      <viewAttribute id="FORECAST_QTY"/>
+      <viewAttribute id="LOCATION_KEY"/>
+      <viewAttribute id="ADJUSTMENT_QTY"/>
+      <viewAttribute id="ADJUSTMENT_AMT"/>
+      <viewAttribute id="DATE_KEY"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="test2209_cube"/>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Projection_1">
+  <attributes>
+    <attribute id="CATEGORY" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CATEGORY"/>
+      <keyMapping columnObjectName="Projection_1" columnName="CATEGORY"/>
+    </attribute>
+    <attribute id="CUSTOMER_NAME" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CUSTOMER_NAME"/>
+      <keyMapping columnObjectName="Projection_1" columnName="CUSTOMER_NAME"/>
+    </attribute>
+    <attribute id="PRODUCT_NAME" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRODUCT_NAME"/>
+      <keyMapping columnObjectName="Projection_1" columnName="PRODUCT_NAME"/>
+    </attribute>
+    <attribute id="CUSTOMER_TYPE" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CUSTOMER_TYPE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="CUSTOMER_TYPE"/>
+    </attribute>
+    <attribute id="productName_category" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="productName_category"/>
+      <keyMapping columnObjectName="Projection_1" columnName="productName_category"/>
+    </attribute>
+    <attribute id="LOCATION_KEY" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LOCATION_KEY"/>
+      <keyMapping columnObjectName="Projection_1" columnName="LOCATION_KEY"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures>
+    <measure id="BEVERAGE_QTY" order="6" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="BEVERAGE_QTY"/>
+      <measureMapping columnObjectName="Projection_1" columnName="BEVERAGE_QTY"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="Deviation_per" order="7" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="Deviation(%)"/>
+      <measureMapping columnObjectName="Projection_1" columnName="Deviation_per"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="SALES_QTY" order="8" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="SALES_QTY"/>
+      <measureMapping columnObjectName="Projection_1" columnName="SALES_QTY"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="FORECAST_QTY" order="9" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="FORECAST_QTY"/>
+      <measureMapping columnObjectName="Projection_1" columnName="FORECAST_QTY"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="ADJUSTMENT_QTY" order="11" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="ADJUSTMENT_QTY"/>
+      <measureMapping columnObjectName="Projection_1" columnName="ADJUSTMENT_QTY"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="ADJUSTMENT_AMT" order="12" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="ADJUSTMENT_AMT"/>
+      <measureMapping columnObjectName="Projection_1" columnName="ADJUSTMENT_AMT"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="DATE_KEY" order="13" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="DATE_KEY"/>
+      <measureMapping columnObjectName="Projection_1" columnName="DATE_KEY"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+  </baseMeasures>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+  <localDimensions/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="92" y="185"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

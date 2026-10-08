@@ -1,0 +1,23 @@
+{
+  "source_hdi": {
+    "object_owner": {
+      "schema_roles": [
+        {
+          "roles": [
+            "training::PUB_ACC_SCHEMA",
+            "training::PUB_ACC_SCHEMA_GRANT#"
+          ]
+        }
+      ]
+    },
+    "application_user": {
+      "schema_roles": [
+        {
+          "roles": [
+            "training::PUB_ACC_SCHEMA"
+          ]
+        }
+      ]
+    }
+  }
+}

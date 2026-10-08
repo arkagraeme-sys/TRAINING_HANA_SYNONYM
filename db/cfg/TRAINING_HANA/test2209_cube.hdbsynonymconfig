@@ -1,0 +1,8 @@
+{
+  "test2209_cube": {
+    "target": {
+      "object": "training.Views.Dimension Views.CV::test2209_cube",
+      "schema": "TRAINING_HANA_HDI_DB_1"
+    }
+  }
+}
